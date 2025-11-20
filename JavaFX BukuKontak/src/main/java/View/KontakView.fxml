@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/20.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.KontakController">
+
+    <children>
+        <!-- Label dan TextField -->
+        <Label layoutX="40.0" layoutY="40.0" text="Nama" />
+        <TextField fx:id="txtNama" layoutX="40.0" layoutY="60.0" prefWidth="150.0" />
+
+        <Label layoutX="210.0" layoutY="40.0" text="Telepon" />
+        <TextField fx:id="txtTelepon" layoutX="210.0" layoutY="60.0" prefWidth="150.0" />
+
+        <Label layoutX="380.0" layoutY="40.0" text="Email" />
+        <TextField fx:id="txtEmail" layoutX="380.0" layoutY="60.0" prefWidth="180.0" />
+
+        <Label layoutX="40.0" layoutY="95.0" text="Alamat" />
+        <TextField fx:id="txtAlamat" layoutX="40.0" layoutY="115.0" prefWidth="520.0" />
+
+        <!-- Tombol CRUD -->
+        <Button fx:id="btnTambah" layoutX="140.0" layoutY="155.0" text="Tambah" onAction="#onTambah" />
+        <Button fx:id="btnEdit" layoutX="250.0" layoutY="155.0" text="Edit" onAction="#onEdit" />
+        <Button fx:id="btnHapus" layoutX="360.0" layoutY="155.0" text="Hapus" onAction="#onHapus" />
+
+        <!-- TableView -->
+        <TableView fx:id="tableKontak" layoutX="40.0" layoutY="200.0" prefWidth="520.0" prefHeight="220.0">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50.0" />
+                <TableColumn fx:id="colNama" text="Nama" prefWidth="120.0" />
+                <TableColumn fx:id="colTelepon" text="Telepon" prefWidth="120.0" />
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="120.0" />
+                <TableColumn fx:id="colAlamat" text="Alamat" prefWidth="110.0" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
